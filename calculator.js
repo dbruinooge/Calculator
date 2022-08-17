@@ -27,10 +27,11 @@ const calculator = (() => {
 
   return {
     displayOperation() {
-      return operation.join(' ').slice(0, 19);
+      return operation.join(' ').slice(0, 40);
     },
 
     displayEntry() {
+      console.log(typeof entry);
       return entry.slice(0, 19);
     },
 
@@ -65,11 +66,11 @@ const calculator = (() => {
       let operator;
       while (operationCopy.length > 0) {
         operator = operationCopy.shift();
-        number = Number(operationCopy.shift());
+        const number = Number(operationCopy.shift());
         result = operationFuncs[operator](result, number);
       }
 
-      entry = result;
+      entry = String(result);
     },
 
     resetOperation() {
@@ -78,7 +79,7 @@ const calculator = (() => {
     },
 
     resetEntry() {
-      entry = 0;
+      entry = '0';
       replaceNumber = true;
     },
 
