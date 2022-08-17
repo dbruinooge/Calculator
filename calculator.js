@@ -46,7 +46,7 @@ const calculator = (() => {
     },
 
     inputNumber(number) {
-      if (entry === '0' && number === '0') {
+      if (replaceNumber && number === '0') {
         return;
       } else if (replaceNumber) {
         entry = number;
