@@ -27,11 +27,11 @@ const calculator = (() => {
 
   return {
     displayOperation() {
-      return operation.join(' ');
+      return operation.join(' ').slice(0, 19);
     },
 
     displayEntry() {
-      return entry;
+      return entry.slice(0, 19);
     },
 
     inputOperator(operator) {
