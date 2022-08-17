@@ -31,7 +31,6 @@ const calculator = (() => {
     },
 
     displayEntry() {
-      console.log(typeof entry);
       return entry.slice(0, 16);
     },
 
@@ -86,7 +85,7 @@ const calculator = (() => {
     },
 
     switchSign() {
-      entry = -entry;
+      entry = String(-Number(entry));
     },
   };
 })();
