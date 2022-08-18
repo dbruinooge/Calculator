@@ -85,6 +85,7 @@ const calculator = (() => {
     },
 
     switchSign() {
+      // convert string to number before negating, then convert back to string
       entry = String(-Number(entry));
     },
   };
